@@ -34,7 +34,7 @@ COPY assets/mysql/pdns.sql /pdns.sql
 
 ### PHP/Nginx ###
 RUN rm /etc/nginx/sites-enabled/default
-RUN php5enmod mcrypt
+RUN phpenmod mcrypt
 RUN mkdir -p /var/www/html/ \
 	&& cd /var/www/html \
 	&& git clone https://github.com/wociscz/poweradmin.git . \
